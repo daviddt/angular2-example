@@ -1,0 +1,39 @@
+{
+  "name": "angular2-example",
+  "version": "1.0.0",
+  "description": "angular 2 example app",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "angular2": "^2.0.0-alpha.45",
+    "reflect-metadata": "^0.1.2",
+    "zone.js": "^0.5.8"
+  },
+  "devDependencies": {
+    "babel-core": "^6.2.1",
+    "babel-loader": "^6.2.0",
+    "ntypescript": "^1.201511220604.1",
+    "ts-loader": "^0.7.1",
+    "typescript": "^1.6.2",
+    "webpack": "^1.12.8",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daviddt/angular2-example.git"
+  },
+  "keywords": [
+    "angular2",
+    "example",
+    "app"
+  ],
+  "author": "David den Toom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daviddt/angular2-example/issues"
+  },
+  "homepage": "https://github.com/daviddt/angular2-example#readme"
+}
