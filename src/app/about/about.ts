@@ -1,10 +1,12 @@
 /// <reference path="../../../typings/angular2/angular2.d.ts" />
 
 import { Component, NgFor } from 'angular2/angular2';
+import AboutService from './about-service';
 
 @Component({
 	selector: 'about',
 	directives: [NgFor],
+	viewProviders: [AboutService],
 	template: `
 		<p>{{title}}</p>
 		<ul>
@@ -17,14 +19,10 @@ class About {
 	title: string;
 	list: Array<Object>;
 	
-	constructor() {
+	constructor(public aboutService: AboutService) {
 		this.title = 'I am the about component!';
-		this.list = [
-			{ name: 'List item one' },
-			{ name: 'List item two' },
-			{ name: 'List item three' }
-		];
-	}	
+		this.list = this.aboutService.getList();
+	};
 };
 
 export default About;
