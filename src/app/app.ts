@@ -5,6 +5,7 @@ import { RouteConfig, RouterLink, RouterOutlet } from 'angular2/router';
 
 import Home from './home/home';
 import About from './about/about';
+import Spotify from './spotify/spotify';
 
 @Component({
 	selector: 'my-app',
@@ -16,7 +17,12 @@ import About from './about/about';
 			<ul>
 			 	<li>
 				 	<a [router-link]="[ '/Home' ]">Home</a>
+				</li>
+				<li>
 					<a [router-link]="[ '/About' ]">About</a>
+				</li>
+				<li>
+					<a [router-link]="[ '/Spotify' ]">Spotify</a>
 				</li>
 			</ul>
 		</nav>
@@ -28,7 +34,8 @@ import About from './about/about';
 @RouteConfig([
 	{ path: '*',     redirectTo: '/' },
   	{ path: '/', component: Home, as: 'Home' },
-	{ path: '/about', component: About, as: 'About' }
+	{ path: '/about', component: About, as: 'About' },
+	{ path: '/spotify', component: Spotify, as: 'Spotify' }
 ])
 
 class App {

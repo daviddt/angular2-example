@@ -1,6 +1,7 @@
 /// <reference path="../../../typings/angular2/angular2.d.ts" />
 
 import { Component, NgFor } from 'angular2/angular2';
+
 import AboutService from './about-service';
 
 @Component({
